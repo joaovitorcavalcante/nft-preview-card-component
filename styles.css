@@ -1,3 +1,158 @@
+:root {
+  --main-background: hsl(217, 54%, 11%);
+  --card-background: hsl(216, 50%, 16%);
+  --line: hsl(215, 32%, 27%);
+
+  --title: hsl(0, 0%, 100%);
+  --text: hsl(215, 51%, 70%);
+
+  --text-focus: hsl(178, 100%, 50%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+}
+
 body {
   font-family: "Outfit", sans-serif;
+  background-color: var(--main-background);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+}
+
+.card {
+  background-color: var(--card-background);
+  max-width: 320px;
+  padding: 25px 24px;
+  border-radius: 15px;
+}
+
+.card__header {
+  position: relative;
+}
+
+.card__image {
+  border-radius: 8px;
+  width: 100%;
+}
+
+.card__image:hover {
+  cursor: pointer;
+}
+
+.card__title {
+  color: var(--title);
+  font-size: 1.2rem;
+  margin-top: 1.35rem;
+}
+
+.card__description {
+  color: var(--text);
+  line-height: 1.5rem;
+  margin-top: 0.65rem;
+}
+
+.card__aside {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 0.85rem;
+}
+
+.card__eth {
+  color: var(--text-focus);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.card__time {
+  color: var(--text);
+}
+
+.card__line {
+  border: 0;
+  height: 1px;
+  background: var(--line);
+
+  margin-top: 0.85rem;
+}
+
+.card__footer {
+  display: flex;
+  align-items: center;
+
+  margin-top: 0.85rem;
+}
+
+.card__avatar {
+  border: 1px solid white;
+  border-radius: 50%;
+
+  width: 33px;
+
+  margin-right: 16px;
+}
+
+.card__author {
+  color: var(--text);
+  font-size: 0.8rem;
+}
+
+.card__name {
+  color: var(--title);
+}
+
+.card__icon {
+  display: flex;
+  align-items: center;
+}
+
+.card__icon img {
+  margin-right: 6px;
+}
+
+.card__text--hover:hover {
+  cursor: pointer;
+
+  color: var(--text-focus);
+  transition: color 0.3s;
+}
+
+.card--overlay {
+  position: absolute;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  height: 100%;
+  width: 100%;
+
+  opacity: 0;
+
+  transition: opacity 0.3s;
+
+  background-color: var(--text-focus);
+
+  border-radius: 8px;
+}
+
+.card__header--hover:hover .card--overlay {
+  cursor: pointer;
+  opacity: 1;
 }
