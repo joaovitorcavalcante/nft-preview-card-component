@@ -19,9 +19,63 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./styles.css" />
 
     <title>Frontend Mentor | NFT preview card component</title>
   </head>
-  <body></body>
+  <body>
+    <main class="card">
+      <header class="card__header card__header--hover">
+        <img
+          class="card__image"
+          src="./assets/images/image-equilibrium.jpg"
+          alt="An image of a floating cube representing the NFT"
+        />
+
+        <div class="card--overlay">
+          <img src="./assets/images/icon-view.svg" alt="One eye icon" />
+        </div>
+      </header>
+      <section>
+        <h1 class="card__title card__text--hover">Equilibrium #3429</h1>
+        <p class="card__description">
+          Out Equilibrium collection promotes balance and calm.
+        </p>
+
+        <aside class="card__aside">
+          <h2 class="card__eth">
+            <div class="card__icon">
+              <img
+                src="./assets/images/icon-ethereum.svg"
+                alt="An icon representing an Ethereum"
+              />
+              0.041 ETH
+            </div>
+          </h2>
+          <time class="card__time">
+            <div class="card__icon">
+              <img
+                src="./assets/images/icon-clock.svg"
+                alt="An icon representing a clock"
+              />
+              3 days left
+            </div>
+          </time>
+        </aside>
+      </section>
+      <hr class="card__line" />
+      <footer class="card__footer">
+        <img
+          class="card__avatar"
+          src="./assets/images/image-avatar.png"
+          alt="Avatar profile picture"
+        />
+
+        <p class="card__author">
+          Creation of
+          <span class="card__name card__text--hover">Jules Wyvern</span>
+        </p>
+      </footer>
+    </main>
+  </body>
 </html>
